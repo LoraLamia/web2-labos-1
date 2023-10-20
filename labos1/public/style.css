@@ -28,3 +28,20 @@
     background-color: burlywood;
     border: solid burlywood;
 }
+
+.dodajNatj {
+    margin-left: 4rem;
+    padding: 1rem;
+    background-color: burlywood;
+    border-radius: 20px;
+    font-size: 20px;
+    color: brown;
+    border: none;
+}
+
+.pozdrav {
+    margin-left: 4rem;
+    padding-bottom: 1rem;
+    color: brown;
+    font-size: 18px;
+}

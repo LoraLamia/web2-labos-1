@@ -1,7 +1,10 @@
 var express = require('express')
+const fs = require('fs');
+const bodyParser = require('body-parser');
 var indexRouter = require('./routes/index.js')
 const { auth } = require('express-openid-connect')
 require('dotenv').config()
+
 
 const config = {
     authRequired: false,
@@ -25,11 +28,14 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 //za posluzivanje statickih stvari koje se nalaze u direktoriju 'public' prije ikakvih ruta(slike,...)
 
+app.use( bodyParser.json() );      
+app.use(bodyParser.urlencoded({extended: true}))
+
 app.use(auth(config));
 //AUTH!!!
 
 app.use('/', indexRouter)
 
-app.listen(3030, () => {
+app.listen(3000, () => {
     console.log("express is running")
 })

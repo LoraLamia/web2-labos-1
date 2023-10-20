@@ -14,23 +14,17 @@
             All competitions
         </div>
         <div class="rest">
-            <div class="all">
-                <div><a href="/3">Nogomet</a></div>
-            </div>
-            <div class="all">
-                <div><a href="/4">Nogomet</a></div>
-            </div>
-            <div class="all">
-                <div><a href="/5">Nogomet</a></div>
-            </div>
-            <div class="all">
-                <div><a href="/6">Nogomet</a></div>
-            </div>
-            <div class="all">
-                <div><a href="/7">Nogomet</a></div>
-            </div>
+            <% competitions.forEach(function(competition) { %>
+                <div class="all">
+                    <div><a href="/<%= competition.id %>"><%= competition.ime %></a></div>
+                </div>
+            <% }); %>
         </div>
     </div>
+    <% if (isAuthenticated) { %>
+        <div class="pozdrav">Hy <%=user.nickname%>!</div>
+        <button class="dodajNatj">Add competition</button>
+    <% } %>
     <!-- <nav>
         <ul>
             <% if(!isAuthenticated) { %>
