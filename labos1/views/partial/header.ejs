@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/headerStyle.css"/>
+</head>
+
+<header class="all">
+    <div class="firstPart">
+        Team Spirit
+    </div>
+    <div class="secondPart">
+        <div class="comp">
+            Competitions
+        </div>
+        <div>
+            <% if(!isAuthenticated) { %>
+            <div><a class="l1" href="/login/">Login</a></div>
+            <% } else { %>
+            <div><a class="l2" href="/logout/">Logout</a></div>
+            <% } %>
+        </div>
+    </div>
+</header>

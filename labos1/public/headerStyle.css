@@ -1,0 +1,46 @@
+.all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.firstPart {
+    border-style: solid;
+    border-radius: 30px;
+    padding: 2rem;
+    font-family: cursive;
+    font-size: 30px;
+    color: brown;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: blanchedalmond;
+}
+
+.secondPart {
+    display: flex;
+    border-style: solid;
+    border-radius: 30px;
+    gap: 4rem;
+    padding: 2.8rem;
+    color: brown;
+    background-color: blanchedalmond;
+}
+
+.l1 {
+    font-size: 20px;
+}
+
+.comp {
+    font-size: 20px;
+}
+
+.l2 {
+    font-size: 20px;
+    color: brown;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+}
+

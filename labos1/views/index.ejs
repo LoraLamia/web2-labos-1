@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('./partial/header.ejs') %>
+    <div class="competitions">
+        <div class="naslov">
+            All competitions
+        </div>
+        <div class="rest">
+            <div class="all">
+                <div><a href="/3">Nogomet</a></div>
+            </div>
+            <div class="all">
+                <div><a href="/4">Nogomet</a></div>
+            </div>
+            <div class="all">
+                <div><a href="/5">Nogomet</a></div>
+            </div>
+            <div class="all">
+                <div><a href="/6">Nogomet</a></div>
+            </div>
+            <div class="all">
+                <div><a href="/7">Nogomet</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- <nav>
+        <ul>
+            <% if(!isAuthenticated) { %>
+            <li><a href="/login/">Login</a></li>
+            <% } else { %>
+            <li><a href="/logout/">Logout</a></li>
+            <% } %>
+        </ul>
+    </nav>
+    <h1 class="naslov"><%= title %></h1>
+    <% if(user) { %>
+        <div class="profileInfo">
+            <img src="<%= user.picture %>"/>
+            <p class="name">
+                <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
+            </p>
+        </div>
+    <% } %> -->
+</body>
+</html>

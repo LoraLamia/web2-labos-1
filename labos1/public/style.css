@@ -1,0 +1,30 @@
+
+
+.competitions {
+    margin: 4rem;
+    background-color: burlywood;
+}
+
+.naslov {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: brown;
+    font-size: 20px;
+    padding: 2rem;
+    padding-left: 40vw;
+    color: blanchedalmond;
+}
+
+.all {
+    margin: 3rem;
+    padding: 2rem;
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    color: brown;
+}
+
+.rest {
+    margin-bottom: 4rem;
+    background-color: burlywood;
+    border: solid burlywood;
+}
