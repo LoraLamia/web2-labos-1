@@ -2,6 +2,7 @@ var express = require('express')
 const fs = require('fs');
 const bodyParser = require('body-parser');
 var indexRouter = require('./routes/index.js')
+var competitionRouter = require('./routes/competition.js');
 const { auth } = require('express-openid-connect')
 require('dotenv').config()
 
@@ -35,6 +36,7 @@ app.use(auth(config));
 //AUTH!!!
 
 app.use('/', indexRouter)
+app.use('/', competitionRouter);
 
 app.listen(3000, () => {
     console.log("express is running")
