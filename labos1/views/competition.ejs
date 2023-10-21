@@ -16,6 +16,7 @@
             <% round.matches.forEach(function(match, matchIndex) { %>
                 <div class="match">
                     <div class="children"><%=match.competitorOne%> - <%=match.competitorTwo%> </div>
+                    <% if(isAuthenticated) { %>
                     <div class="children">
                         <form action="/updateScore" method="post">
                             <input type="text" name="competitorOneScore" value="<%=match.competitorOneScore%>">
@@ -26,14 +27,10 @@
                             <button type="submit">Update</button>
                         </form>
                     </div>
-                    <% if(isAuthenticated) { %>
-                        <div class="flexic">
-                            <button class="butt">Edit</button>
-                            <div class="children"><%=num%>. kolo</div>
-                        </div>
                     <% } else { %>
-                    <div class="children"><%=num%>. kolo</div>
+                        <div class="children"><%=match.competitorOneScore%> - <%=match.competitorTwoScore%></div>
                     <% } %>
+                    <div class="children"><%=num%>. kolo</div>
                 </div>
             <% }); %>
         <% }); %>
