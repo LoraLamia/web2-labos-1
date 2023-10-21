@@ -20,6 +20,7 @@
     padding: 2rem;
     background-color: blanchedalmond;
     border-radius: 20px;
+    border: solid brown;
     color: brown;
 }
 
@@ -41,7 +42,7 @@
 
 .pozdrav {
     margin-left: 4rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     color: brown;
     font-size: 18px;
 }

@@ -18,7 +18,7 @@
                     <div class="children"><%=match.competitorOne%> - <%=match.competitorTwo%> </div>
                     <% if(isAuthenticated) { %>
                     <div class="children">
-                        <form action="/updateScore" method="post">
+                        <form class="forma" action="/updateScore" method="post">
                             <input type="text" name="competitorOneScore" value="<%=match.competitorOneScore%>">
                             <input type="text" name="competitorTwoScore" value="<%=match.competitorTwoScore%>">
                             <input type="hidden" name="competitionId" value="<%=competition.id%>">

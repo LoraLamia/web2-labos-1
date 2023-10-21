@@ -41,13 +41,18 @@ h2 {
     color: brown;
 }
 
-.flexic {
-    display: flex;
+.forma {
+    background-color: burlywood;
 }
 
-.butt {
+input {
+    height: 2rem;
+    width: 1.5rem;
     background-color: blanchedalmond;
-    margin-right: 15px;
+}
+
+button {
+    background-color: blanchedalmond;
 }
 
 

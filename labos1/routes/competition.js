@@ -28,15 +28,11 @@ router.post('/updateScore', (req, res) => {
     const { competitionId, roundOrder, matchIndex, competitorOneScore, competitorTwoScore } = req.body;
 
     console.log(competitionId, roundOrder, matchIndex, competitorOneScore, competitorTwoScore)
-
-    // Load the JSON data
     let data = JSON.parse(fs.readFileSync('natjecanja.json'));
 
-    // Update the score
     data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorOneScore = competitorOneScore;
     data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorTwoScore = competitorTwoScore;
 
-    // Write the updated data back to the file
     fs.writeFileSync('natjecanja.json', JSON.stringify(data, null, 2));
 
     res.redirect(`/${competitionId}`);
