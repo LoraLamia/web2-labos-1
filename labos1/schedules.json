@@ -1,0 +1,37 @@
+{
+    "4": [
+      {"round": 1, "matches": [["Competitor 1", "Competitor 2"], ["Competitor 3", "Competitor 4"]]},
+      {"round": 2, "matches": [["Competitor 1", "Competitor 3"], ["Competitor 2", "Competitor 4"]]},
+      {"round": 3, "matches": [["Competitor 1", "Competitor 4"], ["Competitor 2", "Competitor 3"]]}
+    ],
+    "5": [
+      {"round": 1, "matches": [["Competitor 1", "Competitor 2"], ["Competitor 3", "Competitor 4"], ["Competitor 5", "BYE"]]},
+      {"round": 2, "matches": [["Competitor 1", "Competitor 3"], ["Competitor 2", "Competitor 5"], ["Competitor 4", "BYE"]]},
+      {"round": 3, "matches": [["Competitor 1", "Competitor 4"], ["Competitor 2", "BYE"], ["Competitor 3", "Competitor 5"]]}
+    ],
+    "6": [
+      {"round": 1, "matches": [["Competitor 1", "Competitor 6"], ["Competitor 2", "Competitor 5"], ["Competitor 3", "Competitor 4"]]},
+      {"round": 2, "matches": [["Competitor 1", "Competitor 5"], ["Competitor 6", "Competitor 4"], ["Competitor 2", "Competitor 3"]]},
+      {"round": 3, "matches": [["Competitor 1", "Competitor 4"], ["Competitor 5", "Competitor 3"], ["Competitor 6", "Competitor 2"]]},
+      {"round": 4, "matches": [["Competitor 1", "Competitor 3"], ["Competitor 4", "Competitor 2"], ["Competitor 5", "Competitor 6"]]},
+      {"round": 5, "matches": [["Competitor 1", "Competitor 2"], ["Competitor 6", "Competitor 3"], ["Competitor 4", "Competitor 5"]]}
+    ],
+    "7": [
+      {"round": 1, "matches": [["Competitor 1", "Competitor 7"], ["Competitor 2", "Competitor 6"], ["Competitor 3", "Competitor 5"], ["Competitor 4", "BYE"]]},
+      {"round": 2, "matches": [["Competitor 1", "Competitor 6"], ["Competitor 7", "Competitor 5"], ["Competitor 2", "BYE"], ["Competitor 3", "Competitor 4"]]},
+      {"round": 3, "matches": [["Competitor 1", "Competitor 5"], ["Competitor 6", "Competitor 4"], ["Competitor 7", "Competitor 3"], ["Competitor 2", "BYE"]]},
+      {"round": 4, "matches": [["Competitor 1", "Competitor 4"], ["Competitor 5", "Competitor 3"], ["Competitor 6", "BYE"], ["Competitor 7", "Competitor 2"]]},
+      {"round": 5, "matches": [["Competitor 1", "Competitor 3"], ["Competitor 4", "BYE"], ["Competitor 5", "Competitor 2"], ["Competitor 6", "Competitor 7"]]},
+      {"round": 6, "matches": [["Competitor 1", "Competitor 2"], ["Competitor 3", "Competitor 7"], ["Competitor 4", "Competitor 6"], ["Competitor 5", "BYE"]]}
+    ],
+    "8": [
+      {"round": 1, "matches": [["Competitor 1", "Competitor 8"], ["Competitor 2", "Competitor 7"], ["Competitor 3", "Competitor 6"], ["Competitor 4", "Competitor 5"]]},
+      {"round": 2, "matches": [["Competitor 1", "Competitor 7"], ["Competitor 8", "Competitor 6"], ["Competitor 2", "Competitor 5"], ["Competitor 3", "Competitor 4"]]},
+      {"round": 3, "matches": [["Competitor 1", "Competitor 6"], ["Competitor 7", "Competitor 5"], ["Competitor 8", "Competitor 4"], ["Competitor 2", "Competitor 3"]]},
+      {"round": 4, "matches": [["Competitor 1", "Competitor 5"], ["Competitor 6", "Competitor 4"], ["Competitor 7", "Competitor 3"], ["Competitor 8", "Competitor 2"]]},
+      {"round": 5, "matches": [["Competitor 1", "Competitor 4"], ["Competitor 5", "Competitor 3"], ["Competitor 6", "Competitor 2"], ["Competitor 7", "Competitor 8"]]},
+      {"round": 6, "matches": [["Competitor 1", "Competitor 3"], ["Competitor 4", "Competitor 2"], ["Competitor 5", "Competitor 8"], ["Competitor 6", "Competitor 7"]]},
+      {"round": 7, "matches": [["Competitor 1", "Competitor 2"], ["Competitor 3", "Competitor 8"], ["Competitor 4", "Competitor 7"], ["Competitor 5", "Competitor 6"]]}
+    ]
+  }
+  

@@ -3,6 +3,7 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 var indexRouter = require('./routes/index.js')
 var competitionRouter = require('./routes/competition.js');
+var addCompetitionRouter = require('./routes/addCompetition.js');
 const { auth } = require('express-openid-connect')
 require('dotenv').config()
 
@@ -29,7 +30,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 //za posluzivanje statickih stvari koje se nalaze u direktoriju 'public' prije ikakvih ruta(slike,...)
 
-app.use( bodyParser.json() );      
+app.use(bodyParser.json() );      
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(auth(config));
@@ -37,6 +38,7 @@ app.use(auth(config));
 
 app.use('/', indexRouter)
 app.use('/', competitionRouter);
+app.use('/addCompetition', addCompetitionRouter);
 
 app.listen(3000, () => {
     console.log("express is running")

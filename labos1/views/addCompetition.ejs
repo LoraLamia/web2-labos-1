@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Competition</title>
+</head>
+<body>
+    <%- include('./partial/header.ejs') %>
+    <h1>Add Competition</h1>
+    <form method="post" action="/addCompetition/create">
+        <label for="competitionName">Competition Name:</label><br>
+        <input type="text" id="competitionName" name="competitionName" required><br><br>
+        <label for="competitors">Competitors (Separated by comma or new line):</label><br>
+        <textarea id="competitors" name="competitors" required></textarea><br><br>
+        <label for="scoringSystem">Scoring System (e.g. 3/1/0):</label><br>
+        <input type="text" id="scoringSystem" name="scoringSystem" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

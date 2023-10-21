@@ -9,9 +9,9 @@
 </head>
 <body>
     <%- include('./partial/header.ejs') %>
-    <% if(competition.ime) { %>
-    <div>
-        <%= competition.ime %>
+    <% if(competition) { %>
+    <div class="top">
+        <div><%= competition.ime %></div>
     </div>
     <% } %>
     <!-- <nav>
