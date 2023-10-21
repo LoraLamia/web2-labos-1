@@ -1,0 +1,44 @@
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 3rem;
+    background-color: burlywood;
+    color: brown;
+    border-radius: 20px;
+}
+
+.top {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: blanchedalmond;
+    border-color: brown;
+    border-style: double;
+}
+
+.children {
+    font-size: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 2px solid brown;
+    text-align: left;
+    padding: 8px;
+    background-color: blanchedalmond;
+}
+
+th {
+    background-color: burlywood;
+}
+
+h2 {
+    color: brown;
+}
+
+

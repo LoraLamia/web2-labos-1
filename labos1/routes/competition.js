@@ -17,7 +17,6 @@ router.get('/:id', (req, res) => {
         }
 
         res.render('competition', {
-            title: competition.ime,
             competition: competition,
             isAuthenticated: req.oidc.isAuthenticated(),
             user: req.oidc.user

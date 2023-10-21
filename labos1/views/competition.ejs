@@ -4,33 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css"/>
-    <title><%= title %></title>
+    <link rel="stylesheet" href="/competitionStyle.css"/>
+    <title><%= competition.name %></title>
 </head>
 <body>
     <%- include('./partial/header.ejs') %>
     <% if(competition) { %>
     <div class="top">
-        <div><%= competition.ime %></div>
+        <% competition.rounds.forEach(function(round) { %>
+            <% var num = round.order; %>
+            <% round.matches.forEach(function(match) { %>
+                <div class="match">
+                    <div class="children"><%=match.competitorOne%> - <%=match.competitorTwo%> </div>
+                    <div class="children"><%=match.competitorOneScore%> - <%=match.competitorTwoScore%> </div>
+                    <div class="children"><%=num%>. kolo</div>
+                </div>
+            <% }); %>
+        <% }); %>
     </div>
     <% } %>
-    <!-- <nav>
-        <ul>
-            <% if(!isAuthenticated) { %>
-            <li><a href="/login/">Login</a></li>
-            <% } else { %>
-            <li><a href="/logout/">Logout</a></li>
-            <% } %>
-        </ul>
-    </nav>
-    <h1 class="naslov"><%= title %></h1>
-    <% if(user) { %>
-        <div class="profileInfo">
-            <img src="<%= user.picture %>"/>
-            <p class="name">
-                <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
-            </p>
-        </div>
-    <% } %> -->
+    <h2>Competition Results: <%= competition.name %></h2>
+
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Points</th>
+    </tr>
+
+    <% let standings = [];
+    let scoringSystem = competition.scoringSystem.split('/');
+    competition.competitors.split(',').forEach((team) => {
+        let points = 0;
+        competition.rounds.forEach((round) => {
+            round.matches.forEach((match) => {
+                if (match.competitorOne === team) {
+                    if (match.competitorOneScore !== "TBD") {
+                        if (parseInt(match.competitorOneScore) > parseInt(match.competitorTwoScore)) {
+                            points += parseInt(scoringSystem[0])
+                        } else if (parseInt(match.competitorOneScore) === parseInt(match.competitorTwoScore)) {
+                            points += parseInt(scoringSystem[1])
+                        }
+                    }
+                } else if (match.competitorTwo === team) {
+                    if (match.competitorTwoScore !== "TBD") {
+                        if (parseInt(match.competitorTwoScore) > parseInt(match.competitorOneScore)) {
+                            points += parseInt(scoringSystem[0]);
+                        } else if (parseInt(match.competitorTwoScore) === parseInt(match.competitorOneScore)) {
+                            points += parseInt(scoringSystem[1]);
+                        }
+                    }
+                }
+            });
+        });
+        standings.push({team: team, points: points});
+    });
+    standings.sort((a, b) => b.points - a.points);
+    let position = 1;
+    standings.forEach((standing) => { %>
+    <tr>
+        <td><%= position %></td>
+        <td><%= standing.team %></td>
+        <td><%= standing.points %></td>
+    </tr>
+    <% position++;
+    }); %>
+</table>
 </body>
 </html>
