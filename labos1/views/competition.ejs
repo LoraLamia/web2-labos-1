@@ -13,10 +13,19 @@
     <div class="top">
         <% competition.rounds.forEach(function(round) { %>
             <% var num = round.order; %>
-            <% round.matches.forEach(function(match) { %>
+            <% round.matches.forEach(function(match, matchIndex) { %>
                 <div class="match">
                     <div class="children"><%=match.competitorOne%> - <%=match.competitorTwo%> </div>
-                    <div class="children"><%=match.competitorOneScore%> - <%=match.competitorTwoScore%> </div>
+                    <div class="children">
+                        <form action="/updateScore" method="post">
+                            <input type="text" name="competitorOneScore" value="<%=match.competitorOneScore%>">
+                            <input type="text" name="competitorTwoScore" value="<%=match.competitorTwoScore%>">
+                            <input type="hidden" name="competitionId" value="<%=competition.id%>">
+                            <input type="hidden" name="roundOrder" value="<%=num%>">
+                            <input type="hidden" name="matchIndex" value="<%=matchIndex%>">
+                            <button type="submit">Update</button>
+                        </form>
+                    </div>
                     <% if(isAuthenticated) { %>
                         <div class="flexic">
                             <button class="butt">Edit</button>

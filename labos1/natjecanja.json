@@ -1,63 +1,63 @@
 [
-    {
-        "id": 1,
-        "name": "Premier League",
-        "author": "puki",
-        "email": "puki@gmail.com",
-        "competitors": "Arsenal,Liverpool,Chelsea,Manchester United",
-        "scoringSystem": "3/1/0",
-        "rounds": [
-            {
-                "order": 1,
-                "matches": [
-                    {
-                        "competitorOne": "Arsenal",
-                        "competitorTwo": "Liverpool",
-                        "competitorOneScore": "1",
-                        "competitorTwoScore": "2"
-                    },
-                    {
-                        "competitorOne": "Chelsea",
-                        "competitorTwo": "Manchester United",
-                        "competitorOneScore": "4",
-                        "competitorTwoScore": "0"
-                    }
-                ]
-            },
-            {
-                "order": 2,
-                "matches": [
-                    {
-                        "competitorOne": "Chelsea",
-                        "competitorTwo": "Liverpool",
-                        "competitorOneScore": "1",
-                        "competitorTwoScore": "1"
-                    },
-                    {
-                        "competitorOne": "Arsenal",
-                        "competitorTwo": "Manchester United",
-                        "competitorOneScore": "2",
-                        "competitorTwoScore": "3"
-                    }
-                ]
-            },
-            {
-                "order": 3,
-                "matches": [
-                    {
-                        "competitorOne": "Arsenal",
-                        "competitorTwo": "Chelsea",
-                        "competitorOneScore": "TBD",
-                        "competitorTwoScore": "TBD"
-                    },
-                    {
-                        "competitorOne": "Liverpool",
-                        "competitorTwo": "Manchester United",
-                        "competitorOneScore": "TBD",
-                        "competitorTwoScore": "TBD"
-                    }
-                ]
-            }
+  {
+    "id": 1,
+    "name": "Premier League",
+    "author": "puki",
+    "email": "puki@gmail.com",
+    "competitors": "Arsenal,Liverpool,Chelsea,Manchester United",
+    "scoringSystem": "3/1/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Liverpool",
+            "competitorOneScore": "5",
+            "competitorTwoScore": "0"
+          },
+          {
+            "competitorOne": "Chelsea",
+            "competitorTwo": "Manchester United",
+            "competitorOneScore": "4",
+            "competitorTwoScore": "0"
+          }
         ]
-    }
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "Chelsea",
+            "competitorTwo": "Liverpool",
+            "competitorOneScore": "2",
+            "competitorTwoScore": "1"
+          },
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Manchester United",
+            "competitorOneScore": "2",
+            "competitorTwoScore": "3"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Chelsea",
+            "competitorOneScore": "0",
+            "competitorTwoScore": "0"
+          },
+          {
+            "competitorOne": "Liverpool",
+            "competitorTwo": "Manchester United",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      }
+    ]
+  }
 ]
