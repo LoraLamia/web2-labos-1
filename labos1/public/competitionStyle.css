@@ -41,4 +41,13 @@ h2 {
     color: brown;
 }
 
+.flexic {
+    display: flex;
+}
+
+.butt {
+    background-color: blanchedalmond;
+    margin-right: 15px;
+}
+
 

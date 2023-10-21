@@ -17,7 +17,14 @@
                 <div class="match">
                     <div class="children"><%=match.competitorOne%> - <%=match.competitorTwo%> </div>
                     <div class="children"><%=match.competitorOneScore%> - <%=match.competitorTwoScore%> </div>
+                    <% if(isAuthenticated) { %>
+                        <div class="flexic">
+                            <button class="butt">Edit</button>
+                            <div class="children"><%=num%>. kolo</div>
+                        </div>
+                    <% } else { %>
                     <div class="children"><%=num%>. kolo</div>
+                    <% } %>
                 </div>
             <% }); %>
         <% }); %>
