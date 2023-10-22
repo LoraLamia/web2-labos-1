@@ -21,31 +21,9 @@
             <% }); %>
         </div>
     </div>
-    <!-- <% if (isAuthenticated) { %>
-        <div class="pozdrav">Hy <%=user.nickname%>!</div>
-        <a href="/addCompetition"><button class="dodajNatj">Add competition</button></a>
-    <% } %> -->
     <% if (isAuthenticated) { %>
         <div class="pozdrav">Hy <%=user.nickname%>!</div>
         <a href="/addCompetition/create" class="dodajNatj">Add competition</a>
     <% } %>
-    <!-- <nav>
-        <ul>
-            <% if(!isAuthenticated) { %>
-            <li><a href="/login/">Login</a></li>
-            <% } else { %>
-            <li><a href="/logout/">Logout</a></li>
-            <% } %>
-        </ul>
-    </nav>
-    <h1 class="naslov"><%= title %></h1>
-    <% if(user) { %>
-        <div class="profileInfo">
-            <img src="<%= user.picture %>"/>
-            <p class="name">
-                <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
-            </p>
-        </div>
-    <% } %> -->
 </body>
 </html>

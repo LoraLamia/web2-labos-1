@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "Premier League",
-    "author": "puki",
-    "email": "puki@gmail.com",
+    "author": "huehue",
+    "email": "huehue@test.com",
     "competitors": "Arsenal,Liverpool,Chelsea,Manchester United",
     "scoringSystem": "3/1/0",
     "rounds": [
@@ -199,8 +199,8 @@
           {
             "competitorOne": "A",
             "competitorTwo": "B",
-            "competitorOneScore": "TBD",
-            "competitorTwoScore": "TBD"
+            "competitorOneScore": "2",
+            "competitorTwoScore": "1"
           },
           {
             "competitorOne": "C",
@@ -218,6 +218,253 @@
             "competitorTwo": "C",
             "competitorOneScore": "TBD",
             "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "B",
+            "competitorTwo": "D",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "A",
+            "competitorTwo": "D",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "B",
+            "competitorTwo": "C",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "SuperLiga ",
+    "author": "Some Author",
+    "email": "example@example.com",
+    "competitors": "FCSB,Rapid B.,Sepsi,Petrolul",
+    "scoringSystem": "4/2/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "FCSB",
+            "competitorTwo": "Rapid B.",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Sepsi",
+            "competitorTwo": "Petrolul",
+            "competitorOneScore": "1",
+            "competitorTwoScore": "0"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "FCSB",
+            "competitorTwo": "Sepsi",
+            "competitorOneScore": "2",
+            "competitorTwoScore": "2"
+          },
+          {
+            "competitorOne": "Rapid B.",
+            "competitorTwo": "Petrolul",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "FCSB",
+            "competitorTwo": "Petrolul",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Rapid B.",
+            "competitorTwo": "Sepsi",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "nes",
+    "author": "user",
+    "email": "example@example.com",
+    "competitors": "hue,hi,ha,hei,hie,hu",
+    "scoringSystem": "1/0/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "hue",
+            "competitorTwo": "hu",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hi",
+            "competitorTwo": "hie",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "ha",
+            "competitorTwo": "hei",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "hue",
+            "competitorTwo": "hie",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hu",
+            "competitorTwo": "hei",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hi",
+            "competitorTwo": "ha",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "hue",
+            "competitorTwo": "hei",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hie",
+            "competitorTwo": "ha",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hu",
+            "competitorTwo": "hi",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "matches": [
+          {
+            "competitorOne": "hue",
+            "competitorTwo": "ha",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hei",
+            "competitorTwo": "hi",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hie",
+            "competitorTwo": "hu",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "matches": [
+          {
+            "competitorOne": "hue",
+            "competitorTwo": "hi",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hu",
+            "competitorTwo": "ha",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "hei",
+            "competitorTwo": "hie",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "novo",
+    "author": "huehue",
+    "email": "huehue@test.com",
+    "competitors": "A,B,C,D",
+    "scoringSystem": "4/2/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "A",
+            "competitorTwo": "B",
+            "competitorOneScore": "2",
+            "competitorTwoScore": "1"
+          },
+          {
+            "competitorOne": "C",
+            "competitorTwo": "D",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "A",
+            "competitorTwo": "C",
+            "competitorOneScore": "1",
+            "competitorTwoScore": "1"
           },
           {
             "competitorOne": "B",

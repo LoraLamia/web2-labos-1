@@ -16,7 +16,7 @@
             <% round.matches.forEach(function(match, matchIndex) { %>
                 <div class="match">
                     <div class="children"><%=match.competitorOne%> - <%=match.competitorTwo%> </div>
-                    <% if(isAuthenticated) { %>
+                    <% if(isAuthenticated && user.email === competition.email) { %>
                     <div class="children">
                         <form class="forma" action="/updateScore" method="post">
                             <input type="text" name="competitorOneScore" value="<%=match.competitorOneScore%>">

@@ -3,11 +3,13 @@ var router = express.Router();
 const fs = require('fs');
 
 router.get('/create', (req, res) => {
-    res.render('addCompetition', { isAuthenticated: req.oidc.isAuthenticated() });
+    console.log(req.oidc.user)
+    res.render('addCompetition', { isAuthenticated: req.oidc.isAuthenticated(), user: req.oidc.user });
 });
 
 router.post('/create', (req, res) => {
     const { competitionName, competitors, scoringSystem } = req.body;
+    const user = req.oidc.user
 
     let competitions = JSON.parse(fs.readFileSync('natjecanja.json'));
 
@@ -44,8 +46,8 @@ router.post('/create', (req, res) => {
         const newCompetition = {
             id: newId,
             name: competitionName,
-            author: "Some Author", // Add the actual author here
-            email: "example@example.com", // Add the actual email here
+            author: user.nickname, 
+            email: user.email, 
             competitors: competitorsArray.join(","),
             scoringSystem: scoringSystem,
             rounds: rounds

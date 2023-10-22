@@ -1,3 +1,4 @@
+const { Console } = require('console');
 var express = require('express')
 var router = express.Router()
 const fs = require('fs');
@@ -27,7 +28,6 @@ router.get('/:id', (req, res) => {
 router.post('/updateScore', (req, res) => {
     const { competitionId, roundOrder, matchIndex, competitorOneScore, competitorTwoScore } = req.body;
 
-    console.log(competitionId, roundOrder, matchIndex, competitorOneScore, competitorTwoScore)
     let data = JSON.parse(fs.readFileSync('natjecanja.json'));
 
     data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorOneScore = competitorOneScore;
