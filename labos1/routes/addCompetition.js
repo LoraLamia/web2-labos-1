@@ -22,7 +22,6 @@ router.post('/create', (req, res) => {
             return competitorsArray[index];
         }));
 
-        // Generate ID for the new competition
         let newId = 1;
         if (competitions.length > 0) {
             newId = competitions[competitions.length - 1].id + 1;
@@ -42,7 +41,6 @@ router.post('/create', (req, res) => {
             };
         });
 
-        // Construct the new competition object
         const newCompetition = {
             id: newId,
             name: competitionName,
@@ -50,12 +48,10 @@ router.post('/create', (req, res) => {
             email: "example@example.com", // Add the actual email here
             competitors: competitorsArray.join(","),
             scoringSystem: scoringSystem,
-            rounds: rounds, // Using the modified rounds data
+            rounds: rounds
         };
 
         competitions.push(newCompetition);
-
-        // Write the updated competitions array back to the file
         fs.writeFileSync('natjecanja.json', JSON.stringify(competitions, null, 2));
 
         res.redirect('/');
