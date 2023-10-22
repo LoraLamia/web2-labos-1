@@ -42,19 +42,20 @@ router.post('/create', (req, res) => {
             };
         });
 
-        // Add the newly created competition to the competitions array
+        // Construct the new competition object
         const newCompetition = {
             id: newId,
             name: competitionName,
             author: "Some Author", // Add the actual author here
             email: "example@example.com", // Add the actual email here
-            competitors: competitors,
+            competitors: competitorsArray.join(","),
             scoringSystem: scoringSystem,
-            rounds: schedule,
+            rounds: rounds, // Using the modified rounds data
         };
 
         competitions.push(newCompetition);
 
+        // Write the updated competitions array back to the file
         fs.writeFileSync('natjecanja.json', JSON.stringify(competitions, null, 2));
 
         res.redirect('/');
@@ -62,5 +63,4 @@ router.post('/create', (req, res) => {
         res.send('Invalid number of competitors');
     }
 });
-
 module.exports = router;

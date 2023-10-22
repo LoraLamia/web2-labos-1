@@ -187,98 +187,61 @@
   },
   {
     "id": 3,
-    "name": "Neka nova liga",
-    "author": "Some Author",
-    "email": "example@example.com",
-    "competitors": "FER, Pmf, FOI, TVZ",
-    "scoringSystem": "4/2/0",
-    "rounds": [
-      {
-        "round": 1,
-        "matches": [
-          [
-            "FER",
-            "Pmf"
-          ],
-          [
-            "FOI",
-            "TVZ"
-          ]
-        ]
-      },
-      {
-        "round": 2,
-        "matches": [
-          [
-            "FER",
-            "FOI"
-          ],
-          [
-            "Pmf",
-            "TVZ"
-          ]
-        ]
-      },
-      {
-        "round": 3,
-        "matches": [
-          [
-            "FER",
-            "TVZ"
-          ],
-          [
-            "Pmf",
-            "FOI"
-          ]
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "hue",
+    "name": "Nova liga",
     "author": "Some Author",
     "email": "example@example.com",
     "competitors": "A,B,C,D",
-    "scoringSystem": "1/0/0",
+    "scoringSystem": "2/1/0",
     "rounds": [
       {
-        "round": 1,
+        "order": 1,
         "matches": [
-          [
-            "A",
-            "B"
-          ],
-          [
-            "C",
-            "D"
-          ]
+          {
+            "competitorOne": "A",
+            "competitorTwo": "B",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "C",
+            "competitorTwo": "D",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
         ]
       },
       {
-        "round": 2,
+        "order": 2,
         "matches": [
-          [
-            "A",
-            "C"
-          ],
-          [
-            "B",
-            "D"
-          ]
+          {
+            "competitorOne": "A",
+            "competitorTwo": "C",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "B",
+            "competitorTwo": "D",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
         ]
       },
       {
-        "round": 3,
+        "order": 3,
         "matches": [
-          [
-            "A",
-            "D"
-          ],
-          [
-            "B",
-            "C"
-          ]
+          {
+            "competitorOne": "A",
+            "competitorTwo": "D",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "B",
+            "competitorTwo": "C",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
         ]
       }
     ]
