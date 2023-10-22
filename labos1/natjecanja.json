@@ -59,5 +59,228 @@
         ]
       }
     ]
+  },
+  {
+    "id": 2,
+    "name": "Premier League 2",
+    "author": "puki",
+    "email": "puki@gmail.com",
+    "competitors": "Arsenal,Liverpool,Chelsea,Manchester United,Dinamo,Hajduk",
+    "scoringSystem": "2/1/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Liverpool",
+            "competitorOneScore": "4",
+            "competitorTwoScore": "3"
+          },
+          {
+            "competitorOne": "Chelsea",
+            "competitorTwo": "Dinamo",
+            "competitorOneScore": "3",
+            "competitorTwoScore": "3"
+          },
+          {
+            "competitorOne": "Manchester United",
+            "competitorTwo": "Hajduk",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Chelsea",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Liverpool",
+            "competitorTwo": "Manchester United",
+            "competitorOneScore": "1",
+            "competitorTwoScore": "1"
+          },
+          {
+            "competitorOne": "Dinamo",
+            "competitorTwo": "Hajduk",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Manchester United",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Liverpool",
+            "competitorTwo": "Dinamo",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Chelsea",
+            "competitorTwo": "Hajduk",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Dinamo",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Liverpool",
+            "competitorTwo": "Hajduk",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Chelsea",
+            "competitorTwo": "Manchester United",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "matches": [
+          {
+            "competitorOne": "Arsenal",
+            "competitorTwo": "Hajduk",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Liverpool",
+            "competitorTwo": "Chelsea",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "Manchester United",
+            "competitorTwo": "Dinamo",
+            "competitorOneScore": "5",
+            "competitorTwoScore": "5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Neka nova liga",
+    "author": "Some Author",
+    "email": "example@example.com",
+    "competitors": "FER, Pmf, FOI, TVZ",
+    "scoringSystem": "4/2/0",
+    "rounds": [
+      {
+        "round": 1,
+        "matches": [
+          [
+            "FER",
+            "Pmf"
+          ],
+          [
+            "FOI",
+            "TVZ"
+          ]
+        ]
+      },
+      {
+        "round": 2,
+        "matches": [
+          [
+            "FER",
+            "FOI"
+          ],
+          [
+            "Pmf",
+            "TVZ"
+          ]
+        ]
+      },
+      {
+        "round": 3,
+        "matches": [
+          [
+            "FER",
+            "TVZ"
+          ],
+          [
+            "Pmf",
+            "FOI"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "hue",
+    "author": "Some Author",
+    "email": "example@example.com",
+    "competitors": "A,B,C,D",
+    "scoringSystem": "1/0/0",
+    "rounds": [
+      {
+        "round": 1,
+        "matches": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "C",
+            "D"
+          ]
+        ]
+      },
+      {
+        "round": 2,
+        "matches": [
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "D"
+          ]
+        ]
+      },
+      {
+        "round": 3,
+        "matches": [
+          [
+            "A",
+            "D"
+          ],
+          [
+            "B",
+            "C"
+          ]
+        ]
+      }
+    ]
   }
 ]

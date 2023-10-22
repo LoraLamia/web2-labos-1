@@ -9,28 +9,58 @@ router.get('/create', (req, res) => {
 router.post('/create', (req, res) => {
     const { competitionName, competitors, scoringSystem } = req.body;
 
-    // Assuming your competitions have a unique ID, generate it here
-    const generatedID = generateID(); // You need to implement this function
+    let competitions = JSON.parse(fs.readFileSync('natjecanja.json'));
 
-    // Logic to save the competition to the JSON file
-    let competitions = []; // Read competitions from file
-    // Modify competitions object
-    competitions.push({
-        id: generatedID,
-        ime: competitionName,
-        // Add other properties as needed
-    });
-    // Write back to file
+    const competitorsArray = competitors.split(',').map((competitor) => competitor.trim());
+    const numberOfCompetitors = competitorsArray.length;
 
-    // Redirect to the competition page with the generated ID
-    res.redirect(`/${generatedID}`);
+    if (numberOfCompetitors >= 4 && numberOfCompetitors <= 8) {
+        const scheduleTemplate = JSON.parse(fs.readFileSync('schedules.json'))[numberOfCompetitors.toString()];
+
+        const schedule = JSON.parse(JSON.stringify(scheduleTemplate).replace(/Competitor \d/g, (match) => {
+            const index = parseInt(match.split(' ')[1]) - 1;
+            return competitorsArray[index];
+        }));
+
+        // Generate ID for the new competition
+        let newId = 1;
+        if (competitions.length > 0) {
+            newId = competitions[competitions.length - 1].id + 1;
+        }
+
+        const rounds = schedule.map((round) => {
+            return {
+                order: round.round,
+                matches: round.matches.map((match) => {
+                    return {
+                        competitorOne: match[0],
+                        competitorTwo: match[1],
+                        competitorOneScore: "TBD",
+                        competitorTwoScore: "TBD"
+                    };
+                })
+            };
+        });
+
+        // Add the newly created competition to the competitions array
+        const newCompetition = {
+            id: newId,
+            name: competitionName,
+            author: "Some Author", // Add the actual author here
+            email: "example@example.com", // Add the actual email here
+            competitors: competitors,
+            scoringSystem: scoringSystem,
+            rounds: schedule,
+        };
+
+        competitions.push(newCompetition);
+
+        fs.writeFileSync('natjecanja.json', JSON.stringify(competitions, null, 2));
+
+        res.redirect('/');
+    } else {
+        res.send('Invalid number of competitors');
+    }
 });
-
-function generateID() {
-    const timestamp = new Date().getTime().toString();
-    const randomNum = Math.floor(Math.random() * 1000).toString(); // Adjust the range as needed
-    const uniqueID = timestamp + randomNum;
-    return uniqueID;
-}
 
 module.exports = router;
