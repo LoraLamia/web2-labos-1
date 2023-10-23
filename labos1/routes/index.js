@@ -1,6 +1,6 @@
-var express = require('express')
+import express from 'express';
+import fs from 'fs';
 var router = express.Router()
-const fs = require('fs');
 
 router.get('/', (req, res) => {
     fs.readFile('natjecanja.json', 'utf8', (err, data) => {
@@ -18,4 +18,4 @@ router.get('/', (req, res) => {
     });
 });
 
-module.exports = router
+export const indexRouter = router;

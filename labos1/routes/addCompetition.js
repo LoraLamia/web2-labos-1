@@ -1,6 +1,6 @@
-var express = require('express');
+import express from 'express';
+import fs from 'fs';
 var router = express.Router();
-const fs = require('fs');
 
 router.get('/create', (req, res) => {
     console.log(req.oidc.user)
@@ -61,4 +61,5 @@ router.post('/create', (req, res) => {
         res.send('Invalid number of competitors');
     }
 });
-module.exports = router;
+
+export const addCompetitionRouter = router;

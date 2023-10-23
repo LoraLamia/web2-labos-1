@@ -1,7 +1,7 @@
-const { Console } = require('console');
-var express = require('express')
+
+import express from 'express';
+import fs from 'fs';
 var router = express.Router()
-const fs = require('fs');
 
 router.get('/:id', (req, res) => {
     const competitionId = parseInt(req.params.id);
@@ -38,4 +38,4 @@ router.post('/updateScore', (req, res) => {
     res.redirect(`/${competitionId}`);
 });
 
-module.exports = router;
+export const competitionRouter = router;

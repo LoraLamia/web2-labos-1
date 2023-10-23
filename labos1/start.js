@@ -1,11 +1,32 @@
-var express = require('express')
-const fs = require('fs');
-const bodyParser = require('body-parser');
-var indexRouter = require('./routes/index.js')
-var competitionRouter = require('./routes/competition.js');
-var addCompetitionRouter = require('./routes/addCompetition.js');
-const { auth } = require('express-openid-connect')
-require('dotenv').config()
+import express from 'express';
+import fs from 'fs';
+import bodyParser from 'body-parser';
+import { indexRouter } from './routes/index.js';
+import { competitionRouter } from './routes/competition.js';
+import { addCompetitionRouter } from './routes/addCompetition.js';
+import { auth } from 'express-openid-connect';
+import dotenv from 'dotenv';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+dotenv.config();
+
+if (typeof window !== "undefined") {
+
+
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBCAQNniW9AG7Frv0zPv87xdB3YTcYQGLk",
+        authDomain: "labos1-66e00.firebaseapp.com",
+        projectId: "labos1-66e00",
+        storageBucket: "labos1-66e00.appspot.com",
+        messagingSenderId: "978661393928",
+        appId: "1:978661393928:web:4041c8a1287ce2c4d873bd",
+        measurementId: "G-001KKGVHK2"
+    };
+
+    const firebaseApp = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+}
 
 
 const config = {
