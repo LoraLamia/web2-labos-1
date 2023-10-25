@@ -14,18 +14,12 @@ router.get('/', async (req, res) => {
         });
         console.log(competitionsFromDatabase[0]["extraKljuc"]);
 
-        fs.readFile('natjecanja.json', 'utf8', (err, data) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-            const competitions = JSON.parse(data);
-            res.render('index', {
-                title: 'Competitions',
-                competitions: competitionsFromDatabase[0]["extraKljuc"],
-                isAuthenticated: req.oidc.isAuthenticated(),
-                user: req.oidc.user
-            });
+
+        res.render('index', {
+            title: 'Competitions',
+            competitions: competitionsFromDatabase[0]["extraKljuc"],
+            isAuthenticated: req.oidc.isAuthenticated(),
+            user: req.oidc.user
         });
     } catch {
 

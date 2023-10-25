@@ -31,17 +31,27 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/updateScore', (req, res) => {
-    const { competitionId, roundOrder, matchIndex, competitorOneScore, competitorTwoScore } = req.body;
+router.post('/updateScore', async (req, res) => {
+    try {
+        const { competitionId, roundOrder, matchIndex, competitorOneScore, competitorTwoScore } = req.body;
 
-    let data = JSON.parse(fs.readFileSync('natjecanja.json'));
+        const snapshot = await db.collection("competitions").get();
+        const competitionsFromDatabase = [];
+        snapshot.forEach((doc) => {
+            competitionsFromDatabase.push(doc.data());
+        });
 
-    data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorOneScore = competitorOneScore;
-    data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorTwoScore = competitorTwoScore;
+        let data = competitionsFromDatabase[0]["extraKljuc"]
 
-    fs.writeFileSync('natjecanja.json', JSON.stringify(data, null, 2));
+        data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorOneScore = competitorOneScore;
+        data[competitionId - 1].rounds[roundOrder - 1].matches[matchIndex].competitorTwoScore = competitorTwoScore;
 
-    res.redirect(`/${competitionId}`);
+        const response = db.collection("competitions").doc("competitionsKey").set({"extraKljuc":data})
+
+        res.redirect(`/${competitionId}`);
+    } catch {
+
+    }
 });
 
 export const competitionRouter = router;
