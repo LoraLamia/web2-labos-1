@@ -7,26 +7,19 @@ import { addCompetitionRouter } from './routes/addCompetition.js';
 import { auth } from 'express-openid-connect';
 import dotenv from 'dotenv';
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 dotenv.config();
 
-if (typeof window !== "undefined") {
+const firebaseConfig = {
+    apiKey: "AIzaSyBCAQNniW9AG7Frv0zPv87xdB3YTcYQGLk",
+    authDomain: "labos1-66e00.firebaseapp.com",
+    projectId: "labos1-66e00",
+    storageBucket: "labos1-66e00.appspot.com",
+    messagingSenderId: "978661393928",
+    appId: "1:978661393928:web:4041c8a1287ce2c4d873bd",
+    measurementId: "G-001KKGVHK2"
+};
 
-
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyBCAQNniW9AG7Frv0zPv87xdB3YTcYQGLk",
-        authDomain: "labos1-66e00.firebaseapp.com",
-        projectId: "labos1-66e00",
-        storageBucket: "labos1-66e00.appspot.com",
-        messagingSenderId: "978661393928",
-        appId: "1:978661393928:web:4041c8a1287ce2c4d873bd",
-        measurementId: "G-001KKGVHK2"
-    };
-
-    const firebaseApp = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-}
+const app2 = initializeApp(firebaseConfig);
 
 
 const config = {

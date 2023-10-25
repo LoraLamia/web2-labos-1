@@ -2,16 +2,20 @@
 import express from 'express';
 import fs from 'fs';
 var router = express.Router()
+import firebaseApp from '../firebase.js';
 
-router.get('/:id', (req, res) => {
-    const competitionId = parseInt(req.params.id);
-    fs.readFile('natjecanja.json', 'utf8', (err, data) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        const competitions = JSON.parse(data);
-        const competition = competitions.find(comp => comp.id === competitionId);
+const db = firebaseApp.firestore();
+
+router.get('/:id', async (req, res) => {
+    try {
+        const snapshot = await db.collection("competitions").get();
+        const competitionsFromDatabase = [];
+        snapshot.forEach((doc) => {
+            competitionsFromDatabase.push(doc.data());
+        });
+        const competitionId = parseInt(req.params.id);
+
+        const competition = competitionsFromDatabase[0]["extraKljuc"].find(comp => comp.id === competitionId);
         if (!competition) {
             console.log("Competition not found");
             return;
@@ -22,7 +26,9 @@ router.get('/:id', (req, res) => {
             isAuthenticated: req.oidc.isAuthenticated(),
             user: req.oidc.user
         });
-    });
+    } catch {
+
+    }
 });
 
 router.post('/updateScore', (req, res) => {

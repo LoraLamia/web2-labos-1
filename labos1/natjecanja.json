@@ -492,5 +492,127 @@
         ]
       }
     ]
+  },
+  {
+    "id": 7,
+    "name": "ProbaZaFirebase",
+    "author": "huehue",
+    "email": "huehue@test.com",
+    "competitors": "Q,W,E,R",
+    "scoringSystem": "2/1/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "Q",
+            "competitorTwo": "W",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "E",
+            "competitorTwo": "R",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "Q",
+            "competitorTwo": "E",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "W",
+            "competitorTwo": "R",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "Q",
+            "competitorTwo": "R",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "W",
+            "competitorTwo": "E",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Probica",
+    "author": "huehue",
+    "email": "huehue@test.com",
+    "competitors": "q,w,e,r",
+    "scoringSystem": "2/1/0",
+    "rounds": [
+      {
+        "order": 1,
+        "matches": [
+          {
+            "competitorOne": "q",
+            "competitorTwo": "w",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "e",
+            "competitorTwo": "r",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "matches": [
+          {
+            "competitorOne": "q",
+            "competitorTwo": "e",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "w",
+            "competitorTwo": "r",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "matches": [
+          {
+            "competitorOne": "q",
+            "competitorTwo": "r",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          },
+          {
+            "competitorOne": "w",
+            "competitorTwo": "e",
+            "competitorOneScore": "TBD",
+            "competitorTwoScore": "TBD"
+          }
+        ]
+      }
+    ]
   }
 ]
