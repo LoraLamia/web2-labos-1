@@ -37,6 +37,7 @@ app.use('/', indexRouter)
 app.use('/', competitionRouter);
 app.use('/addCompetition', addCompetitionRouter);
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000
+app.listen(port, () => {
     console.log("express is running")
 })
